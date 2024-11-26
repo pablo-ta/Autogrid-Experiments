@@ -1,0 +1,20 @@
+11-14 11:24 | DEBUG   | src.AutoGrid             | 158  | Format logger configured [{'fmt': '{asctime} | {levelname:7s} | {name:24s} | {lineno:<4n} | {message}', 'style': '{', 'datefmt': '%m-%d %H:%M'}]
+11-14 11:24 | DEBUG   | src.AutoGrid             | 159  | Console logger configured [{'level': 'DEBUG'}]
+11-14 11:24 | DEBUG   | src.AutoGrid             | 160  | File logger configured [{'level': 'DEBUG', 'filename': './agents_DoNothing\\all_execution_log.log', 'mode': 'a'}]
+11-14 11:24 | DEBUG   | src.AutoGrid             | 89   | Configured runner <runners.base.baseRunner object at 0x000002746640F4F0>
+11-14 11:24 | INFO    | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 44   | Executing experiment file ~\AutoGrid\experiments\sb3_grid_ace\final\do_nothing.py
+11-14 11:24 | INFO    | src.AutoGrid             | 169  | Starting execution.
+11-14 11:24 | INFO    | runners.base             | 98   | Preparing experiment [experiment_Do_Nothing]
+11-14 11:24 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[maker]=<function create_do_nothing_agent at 0x00000274602D6310> with common[maker]=<function create_agent_sb3 at 0x0000027460330700>
+11-14 11:24 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[training]=None with common[training]=DEFAULT
+11-14 11:24 | DEBUG   | runners.base             | 37   | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+11-14 11:24 | DEBUG   | runners.base             | 50   | Creating a new environment using <function make at 0x000002745F9D40D0>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.increasingFlatReward.IncreasingFlatReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002746640F640>}))
+11-14 11:24 | DEBUG   | runners.base             | 64   | Creating a new evaluation environment using <function make at 0x000002745F9D40D0>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002746640F670>}))
+11-14 11:24 | INFO    | runners.base             | 74   | Executing experiment [Do_Nothing]
+11-14 11:24 | INFO    | src.trainner.trainer     | 27   | Training agent [<grid2op.Agent.doNothing.DoNothingAgent object at 0x00000274694A8DF0>] with trainner: None({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_DoNothing\\Do_Nothing', 'tb_log_name': 'Do_Nothing'})
+11-14 11:24 | INFO    | src.trainner.trainer     | 28   | <grid2op.Reward.increasingFlatReward.IncreasingFlatReward object at 0x0000027466F2E4F0>
+11-14 11:24 | WARNING | src.trainner.trainer     | 40   | [None] is not a valid training method or class.
+11-14 11:24 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+11-14 11:24 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002746949FAC0>
+11-14 11:28 | DEBUG   | runners.base             | 85   | Execution finished, cleaning up resources.
+11-14 11:28 | INFO    | src.AutoGrid             | 171  | Finished execution.

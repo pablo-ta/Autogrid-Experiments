@@ -1,0 +1,12 @@
+{
+    "Agent": {
+        "total": 3.177335900010462
+    },
+    "Env": {
+        "apply_act": 2.663706399998887,
+        "observation_computation": 1.5880098000033058,
+        "powerflow_computation": 1.4028423999966435,
+        "total": 5.654558599998836
+    },
+    "total": 10.326577799999995
+}

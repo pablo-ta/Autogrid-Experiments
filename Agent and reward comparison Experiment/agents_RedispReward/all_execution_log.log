@@ -1,0 +1,656 @@
+08-09 00:39 | DEBUG   | src.AutoGrid             | 126  | Format logger configured [{'fmt': '{asctime} | {levelname:7s} | {name:24s} | {lineno:<4n} | {message}', 'style': '{', 'datefmt': '%m-%d %H:%M'}]
+08-09 00:39 | DEBUG   | src.AutoGrid             | 127  | Console logger configured [{'level': 'DEBUG'}]
+08-09 00:39 | DEBUG   | src.AutoGrid             | 128  | File logger configured [{'level': 'DEBUG', 'filename': './agents_RedispReward\\all_execution_log.log', 'mode': 'a'}]
+08-09 00:39 | INFO    | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 33   | Executing experiment file ~\AutoGrid\experiments\sb3_grid_ace\final\all_RedispReward.py
+08-09 00:39 | INFO    | src.AutoGrid             | 187  | Starting execution.
+08-09 00:39 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_Do_Nothing]
+08-09 00:39 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[maker]=<function create_do_nothing_agent at 0x000001C3820541F0> with common[maker]=<function create_agent_sb3 at 0x000001C382912670>
+08-09 00:39 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[training]=None with common[training]=DEFAULT
+08-09 00:39 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-09 00:39 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C388C7F340>}))
+08-09 00:39 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C388C7F370>}))
+08-09 00:39 | INFO    | src.AutoGrid             | 199  | Training agent with [None]
+08-09 00:39 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<grid2op.Agent.doNothing.DoNothingAgent object at 0x000001C38BD37BB0>] with trainner: None({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\Do_Nothing', 'tb_log_name': 'Do_Nothing'})
+08-09 00:39 | WARNING | src.trainner.trainer     | 39   | [None] is not a valid training method or class.
+08-09 00:39 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-09 00:39 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-09 00:39 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000001C38BC6EA00>
+08-09 00:45 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-09 00:45 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_box]
+08-09 00:45 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-09 00:45 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C38B8E2460>}))
+08-09 00:45 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C3828DDDC0>}))
+08-09 00:45 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-09 00:45 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-09 00:45 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-09 00:45 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-09 00:45 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-09 00:45 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-09 00:45 | DEBUG   | src.makers.SB3           | 81   | tensorboard logging directory [./agents_RedispReward\tensorboard_log] does not exist, creating it now.
+08-09 00:45 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-09 00:45 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000001C38BC06310>
+08-09 00:45 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-09 00:45 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-09 00:45 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-09 00:45 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-09 00:45 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000001C38BB85280>, 'verbose': True}
+08-09 00:45 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-09 00:45 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-09 00:45 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000001C38D125C40>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_box', 'tb_log_name': 'A2C_box'})
+08-09 00:45 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-10 07:48 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-10 07:48 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-10 07:48 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000001C38CFAB640>
+08-10 07:57 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-10 07:57 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete]
+08-10 07:57 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-10 07:57 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C39EE82C40>}))
+08-10 07:57 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C38BE72FD0>}))
+08-10 07:57 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-10 07:57 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-10 07:57 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-10 07:57 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-10 07:57 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'curtail', 'redispatch'}}
+08-10 07:57 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-10 07:57 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-10 07:57 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000001C3A5EC4460>
+08-10 07:57 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-10 07:57 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-10 07:57 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-10 07:57 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-10 07:57 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000001C390901A90>, 'verbose': True}
+08-10 07:57 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-10 07:57 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-10 07:57 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000001C38EE0CBB0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete', 'tb_log_name': 'A2C_discrete'})
+08-10 07:57 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-10 22:44 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-10 22:44 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-10 22:44 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000001C39067D5E0>
+08-10 22:58 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-10 22:58 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete_singleaction]
+08-10 22:58 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-10 22:58 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C39F455340>}))
+08-10 22:58 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C39F12DFA0>}))
+08-10 22:58 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-10 22:58 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x000001C388C7CDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x000001C388C7CD30>}
+08-10 22:58 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-10 22:58 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000001C3A90AA580>
+08-10 22:58 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-10 22:58 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-10 22:58 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-10 22:58 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-10 22:58 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000001C392B80DF0>, 'verbose': True}
+08-10 22:58 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-10 22:58 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-10 22:58 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000001C3A91582E0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete_singleaction', 'tb_log_name': 'A2C_discrete_singleaction'})
+08-10 22:58 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-11 14:15 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-11 14:15 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-11 14:15 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000001C39EFBB3A0>
+08-11 14:29 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-11 14:29 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DDPG_box]
+08-11 14:29 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-11 14:29 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C39F192370>}))
+08-11 14:29 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000001C381FB4160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000001C391009C70>}))
+08-11 14:29 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-11 14:29 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-11 14:29 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-11 14:29 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-11 14:29 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-11 14:29 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-11 14:29 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ddpg.ddpg.DDPG'>]
+08-11 14:29 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000001C3A15686A0>
+08-11 14:29 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-11 14:29 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-11 14:29 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-11 14:29 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ddpg.ddpg.DDPG'>
+08-11 14:29 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.td3.policies.TD3Policy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000001C394BB9C10>, 'verbose': True}
+08-11 14:29 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-11 14:29 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-11 14:29 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000001C3A1560550>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DDPG_box', 'tb_log_name': 'DDPG_box'})
+08-11 14:29 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-15 11:17 | DEBUG   | src.AutoGrid             | 126  | Format logger configured [{'fmt': '{asctime} | {levelname:7s} | {name:24s} | {lineno:<4n} | {message}', 'style': '{', 'datefmt': '%m-%d %H:%M'}]
+08-15 11:17 | DEBUG   | src.AutoGrid             | 127  | Console logger configured [{'level': 'DEBUG'}]
+08-15 11:17 | DEBUG   | src.AutoGrid             | 128  | File logger configured [{'level': 'DEBUG', 'filename': './agents_RedispReward\\all_execution_log.log', 'mode': 'a'}]
+08-15 11:17 | INFO    | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 33   | Executing experiment file ~\AutoGrid\experiments\sb3_grid_ace\final\all_RedispReward.py
+08-15 11:17 | INFO    | src.AutoGrid             | 187  | Starting execution.
+08-15 11:17 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_Do_Nothing]
+08-15 11:17 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[maker]=<function create_do_nothing_agent at 0x000002B7064451F0> with common[maker]=<function create_agent_sb3 at 0x000002B706D02670>
+08-15 11:17 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[training]=None with common[training]=DEFAULT
+08-15 11:17 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-15 11:17 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70CDDF3A0>}))
+08-15 11:18 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70CDDF3D0>}))
+08-15 11:18 | INFO    | src.AutoGrid             | 199  | Training agent with [None]
+08-15 11:18 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<grid2op.Agent.doNothing.DoNothingAgent object at 0x000002B7111A7BB0>] with trainner: None({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\Do_Nothing', 'tb_log_name': 'Do_Nothing'})
+08-15 11:18 | WARNING | src.trainner.trainer     | 39   | [None] is not a valid training method or class.
+08-15 11:18 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-15 11:18 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-15 11:18 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002B7111ACA00>
+08-15 11:25 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-15 11:25 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_box]
+08-15 11:25 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-15 11:25 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70CEDED60>}))
+08-15 11:25 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70CDD4AC0>}))
+08-15 11:25 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-15 11:25 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-15 11:25 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-15 11:25 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-15 11:25 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-15 11:25 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-15 11:25 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-15 11:25 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000002B7110DE700>
+08-15 11:25 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-15 11:25 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-15 11:25 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-15 11:25 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-15 11:25 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000002B712204A90>, 'verbose': True}
+08-15 11:25 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_box.zip
+08-15 11:25 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-15 11:25 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_box.zip]
+08-15 11:25 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-15 11:25 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-15 11:25 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000002B712A32400>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_box', 'tb_log_name': 'A2C_box'})
+08-15 11:25 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-15 11:25 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-15 11:25 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-15 11:25 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002B70D6F1100>
+08-15 11:34 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-15 11:34 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete]
+08-15 11:34 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-15 11:34 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70FFB2040>}))
+08-15 11:34 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70FA392B0>}))
+08-15 11:34 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-15 11:34 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-15 11:34 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-15 11:34 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-15 11:34 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'curtail', 'redispatch'}}
+08-15 11:34 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-15 11:34 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-15 11:34 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000002B70FD61C10>
+08-15 11:34 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-15 11:34 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-15 11:34 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-15 11:34 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-15 11:34 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000002B726C01D90>, 'verbose': True}
+08-15 11:34 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete.zip
+08-15 11:34 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-15 11:34 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete.zip]
+08-15 11:34 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-15 11:34 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-15 11:34 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000002B726C7B700>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete', 'tb_log_name': 'A2C_discrete'})
+08-15 11:34 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-15 11:34 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-15 11:34 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-15 11:34 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002B71776F190>
+08-15 11:48 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-15 11:48 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete_singleaction]
+08-15 11:48 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-15 11:48 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B711245D00>}))
+08-15 11:48 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B7227D6AC0>}))
+08-15 11:48 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-15 11:48 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x000002B70CDDCDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x000002B70CDDCD30>}
+08-15 11:48 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-15 11:48 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000002B7230BD640>
+08-15 11:48 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-15 11:48 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-15 11:48 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-15 11:48 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-15 11:48 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000002B7131E6EE0>, 'verbose': True}
+08-15 11:48 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete_singleaction.zip
+08-15 11:48 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-15 11:48 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete_singleaction.zip]
+08-15 11:48 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-15 11:48 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-15 11:48 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000002B71125BB20>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete_singleaction', 'tb_log_name': 'A2C_discrete_singleaction'})
+08-15 11:48 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-15 11:48 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-15 11:48 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-15 11:48 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002B7167B3AF0>
+08-15 12:00 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-15 12:00 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DDPG_box]
+08-15 12:00 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-15 12:00 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B70FD661C0>}))
+08-15 12:00 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x000002B7063A5160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002B718C56C70>}))
+08-15 12:00 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-15 12:00 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-15 12:00 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-15 12:00 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-15 12:00 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-15 12:00 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-15 12:00 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ddpg.ddpg.DDPG'>]
+08-15 12:00 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000002B726123E50>
+08-15 12:00 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-15 12:00 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-15 12:00 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-15 12:00 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ddpg.ddpg.DDPG'>
+08-15 12:00 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.td3.policies.TD3Policy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000002B726F292E0>, 'verbose': True}
+08-15 12:00 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-15 12:00 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-15 12:00 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x000002B7267A1370>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DDPG_box', 'tb_log_name': 'DDPG_box'})
+08-15 12:00 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-17 12:26 | DEBUG   | src.AutoGrid             | 126  | Format logger configured [{'fmt': '{asctime} | {levelname:7s} | {name:24s} | {lineno:<4n} | {message}', 'style': '{', 'datefmt': '%m-%d %H:%M'}]
+08-17 12:26 | DEBUG   | src.AutoGrid             | 127  | Console logger configured [{'level': 'DEBUG'}]
+08-17 12:26 | DEBUG   | src.AutoGrid             | 128  | File logger configured [{'level': 'DEBUG', 'filename': './agents_RedispReward\\all_execution_log.log', 'mode': 'a'}]
+08-17 12:26 | INFO    | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 33   | Executing experiment file ~\AutoGrid\experiments\sb3_grid_ace\final\all_RedispReward.py
+08-17 12:26 | INFO    | src.AutoGrid             | 187  | Starting execution.
+08-17 12:26 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_Do_Nothing]
+08-17 12:26 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[maker]=<function create_do_nothing_agent at 0x00000290801C51F0> with common[maker]=<function create_agent_sb3 at 0x0000029080A62670>
+08-17 12:26 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[training]=None with common[training]=DEFAULT
+08-17 12:26 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-17 12:26 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029086DCF3A0>}))
+08-17 12:27 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029086DCF3D0>}))
+08-17 12:27 | INFO    | src.AutoGrid             | 199  | Training agent with [None]
+08-17 12:27 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<grid2op.Agent.doNothing.DoNothingAgent object at 0x0000029089DBBD60>] with trainner: None({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\Do_Nothing', 'tb_log_name': 'Do_Nothing'})
+08-17 12:27 | WARNING | src.trainner.trainer     | 39   | [None] is not a valid training method or class.
+08-17 12:27 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-17 12:27 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-17 12:27 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000029089DABA30>
+08-17 12:35 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-17 12:35 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_box]
+08-17 12:35 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-17 12:35 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029089FA2A30>}))
+08-17 12:35 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029086DC3AC0>}))
+08-17 12:35 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-17 12:35 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-17 12:35 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-17 12:35 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-17 12:35 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-17 12:35 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-17 12:35 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-17 12:35 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x000002908A008D00>
+08-17 12:35 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-17 12:35 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-17 12:35 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-17 12:35 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-17 12:35 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x000002908779DCA0>, 'verbose': True}
+08-17 12:35 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_box.zip
+08-17 12:35 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-17 12:35 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_box.zip]
+08-17 12:35 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-17 12:35 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-17 12:35 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000029086EE3A30>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_box', 'tb_log_name': 'A2C_box'})
+08-17 12:35 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-17 12:35 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-17 12:35 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-17 12:35 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x00000290878F15E0>
+08-17 12:43 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-17 12:43 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete]
+08-17 12:43 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-17 12:43 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029089B97C70>}))
+08-17 12:43 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002908770A700>}))
+08-17 12:43 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-17 12:43 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-17 12:43 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-17 12:43 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-17 12:43 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'curtail', 'redispatch'}}
+08-17 12:43 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-17 12:43 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-17 12:43 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000029092BFA730>
+08-17 12:43 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-17 12:43 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-17 12:43 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-17 12:43 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-17 12:43 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x00000290A0699850>, 'verbose': True}
+08-17 12:43 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete.zip
+08-17 12:43 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-17 12:43 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete.zip]
+08-17 12:43 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-17 12:43 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-17 12:43 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000029092E2DD60>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete', 'tb_log_name': 'A2C_discrete'})
+08-17 12:43 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-17 12:43 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-17 12:43 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-17 12:43 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002909F334220>
+08-17 12:54 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-17 12:54 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete_singleaction]
+08-17 12:54 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-17 12:54 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029080203760>}))
+08-17 12:54 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029086DC3AC0>}))
+08-17 12:54 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-17 12:54 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x0000029086DCCDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x0000029086DCCD30>}
+08-17 12:54 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-17 12:54 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x00000290A7BD9430>
+08-17 12:54 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-17 12:54 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-17 12:54 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-17 12:54 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-17 12:54 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000029092EC4E80>, 'verbose': True}
+08-17 12:54 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete_singleaction.zip
+08-17 12:54 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-17 12:54 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete_singleaction.zip]
+08-17 12:54 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-17 12:54 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-17 12:54 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x00000290A10828E0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete_singleaction', 'tb_log_name': 'A2C_discrete_singleaction'})
+08-17 12:54 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-17 12:54 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-17 12:54 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-17 12:54 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x000002909F3345E0>
+08-17 13:06 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-17 13:06 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DDPG_box]
+08-17 13:06 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-17 13:06 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000029080A41940>}))
+08-17 13:06 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000029080124160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x000002908EBB7D00>}))
+08-17 13:06 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-17 13:06 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-17 13:06 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-17 13:06 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-17 13:06 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-17 13:06 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-17 13:06 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ddpg.ddpg.DDPG'>]
+08-17 13:06 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x00000290A3AD1520>
+08-17 13:06 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-17 13:06 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-17 13:06 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-17 13:06 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ddpg.ddpg.DDPG'>
+08-17 13:06 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.td3.policies.TD3Policy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000029103E03DF0>, 'verbose': True}
+08-17 13:06 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-17 13:06 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-17 13:06 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x00000290A40285B0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DDPG_box', 'tb_log_name': 'DDPG_box'})
+08-17 13:06 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-20 02:49 | DEBUG   | src.AutoGrid             | 126  | Format logger configured [{'fmt': '{asctime} | {levelname:7s} | {name:24s} | {lineno:<4n} | {message}', 'style': '{', 'datefmt': '%m-%d %H:%M'}]
+08-20 02:49 | DEBUG   | src.AutoGrid             | 127  | Console logger configured [{'level': 'DEBUG'}]
+08-20 02:49 | DEBUG   | src.AutoGrid             | 128  | File logger configured [{'level': 'DEBUG', 'filename': './agents_RedispReward\\all_execution_log.log', 'mode': 'a'}]
+08-20 02:49 | INFO    | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 33   | Executing experiment file ~\AutoGrid\experiments\sb3_grid_ace\final\all_RedispReward.py
+08-20 02:49 | INFO    | src.AutoGrid             | 187  | Starting execution.
+08-20 02:49 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_Do_Nothing]
+08-20 02:49 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[maker]=<function create_do_nothing_agent at 0x0000019EF71241F0> with common[maker]=<function create_agent_sb3 at 0x0000019EF79E2670>
+08-20 02:49 | DEBUG   | src.helpers              | 81   | Conflict at values of experiment_Do_Nothing[training]=None with common[training]=DEFAULT
+08-20 02:49 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-20 02:49 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFDABF3A0>}))
+08-20 02:49 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFDABF3D0>}))
+08-20 02:49 | INFO    | src.AutoGrid             | 199  | Training agent with [None]
+08-20 02:49 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<grid2op.Agent.doNothing.DoNothingAgent object at 0x0000019EFEB68D60>] with trainner: None({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\Do_Nothing', 'tb_log_name': 'Do_Nothing'})
+08-20 02:49 | WARNING | src.trainner.trainer     | 39   | [None] is not a valid training method or class.
+08-20 02:49 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-20 02:49 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-20 02:49 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019EFEB59A30>
+08-20 02:57 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-20 02:57 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_box]
+08-20 02:57 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-20 02:57 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFDBBED60>}))
+08-20 02:57 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFDAB4AC0>}))
+08-20 02:57 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-20 02:57 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-20 02:57 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-20 02:57 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-20 02:57 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-20 02:57 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-20 02:57 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-20 02:57 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E8B2A7340>
+08-20 02:57 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-20 02:57 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-20 02:57 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-20 02:57 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-20 02:57 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E85A08A60>, 'verbose': True}
+08-20 02:57 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_box.zip
+08-20 02:57 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-20 02:57 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_box.zip]
+08-20 02:57 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-20 02:57 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-20 02:57 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019EFFCF6760>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_box', 'tb_log_name': 'A2C_box'})
+08-20 02:57 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-20 02:57 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-20 02:57 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-20 02:57 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E885C43A0>
+08-20 03:05 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-20 03:05 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete]
+08-20 03:05 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-20 03:05 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E84643CD0>}))
+08-20 03:05 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFFF4AEB0>}))
+08-20 03:05 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-20 03:05 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-20 03:05 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-20 03:05 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-20 03:05 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'redispatch', 'curtail'}}
+08-20 03:05 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-20 03:05 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-20 03:05 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E83B05D00>
+08-20 03:05 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-20 03:05 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-20 03:05 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-20 03:05 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-20 03:05 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E956CAD90>, 'verbose': True}
+08-20 03:05 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete.zip
+08-20 03:05 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-20 03:05 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete.zip]
+08-20 03:05 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-20 03:05 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-20 03:05 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E91967DC0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete', 'tb_log_name': 'A2C_discrete'})
+08-20 03:05 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-20 03:05 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-20 03:05 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-20 03:05 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E85A08490>
+08-20 03:17 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-20 03:17 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_A2C_discrete_singleaction]
+08-20 03:17 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-20 03:17 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019EFDAB4AC0>}))
+08-20 03:17 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E98553F70>}))
+08-20 03:17 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-20 03:17 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x0000019EFDABCDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x0000019EFDABCD30>}
+08-20 03:17 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.a2c.a2c.A2C'>]
+08-20 03:17 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E918B05B0>
+08-20 03:17 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-20 03:17 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-20 03:17 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-20 03:17 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.a2c.a2c.A2C'>
+08-20 03:17 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019F0836DEB0>, 'verbose': True}
+08-20 03:17 | DEBUG   | src.makers.SB3           | 94   | nn_path: ./agents_RedispReward\A2C_discrete_singleaction.zip
+08-20 03:17 | WARNING | src.agents.grid2OpGymAgent | 100  | Both nn_path and nn_kwargs are set, an agent will be loaded, not created.To create and agent please set nn_path to None
+08-20 03:17 | DEBUG   | src.agents.Grid2OpSB3    | 176  | loading agent from [./agents_RedispReward\A2C_discrete_singleaction.zip]
+08-20 03:17 | DEBUG   | src.agents.Grid2OpSB3    | 180  | Agent loaded with  10000000 total_timesteps trained
+08-20 03:17 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-20 03:17 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E823242B0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\A2C_discrete_singleaction', 'tb_log_name': 'A2C_discrete_singleaction'})
+08-20 03:17 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 0 timesteps
+08-20 03:17 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-20 03:17 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-20 03:17 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E971D7F40>
+08-20 03:29 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-20 03:29 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DDPG_box]
+08-20 03:29 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-20 03:29 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E9121DFD0>}))
+08-20 03:29 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E9121D310>}))
+08-20 03:29 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-20 03:29 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-20 03:29 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-20 03:29 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-20 03:29 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-20 03:29 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-20 03:29 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ddpg.ddpg.DDPG'>]
+08-20 03:29 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E8C425EE0>
+08-20 03:29 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-20 03:29 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-20 03:29 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-20 03:29 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ddpg.ddpg.DDPG'>
+08-20 03:29 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.td3.policies.TD3Policy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E8DE5AE20>, 'verbose': True}
+08-20 03:29 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-20 03:29 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-20 03:29 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E99203340>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DDPG_box', 'tb_log_name': 'DDPG_box'})
+08-20 03:29 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-26 19:19 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-26 19:19 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-26 19:19 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E98CF0FD0>
+08-26 19:24 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-26 19:24 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DQN_discrete]
+08-26 19:24 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-26 19:24 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E85A42E50>}))
+08-26 19:24 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E9BDEF9A0>}))
+08-26 19:24 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-26 19:24 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-26 19:24 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-26 19:24 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-26 19:24 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'redispatch', 'curtail'}}
+08-26 19:24 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-26 19:24 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.dqn.dqn.DQN'>]
+08-26 19:24 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E912E1850>
+08-26 19:24 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-26 19:24 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-26 19:24 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-26 19:24 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.dqn.dqn.DQN'>
+08-26 19:24 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.dqn.policies.DQNPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E9B04F520>, 'verbose': True}
+08-26 19:24 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-26 19:24 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-26 19:24 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E982DD1F0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DQN_discrete', 'tb_log_name': 'DQN_discrete'})
+08-26 19:24 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-27 21:09 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-27 21:09 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-27 21:09 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E88349430>
+08-27 21:13 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-27 21:13 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_DQN_discrete_singleaction]
+08-27 21:13 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-27 21:13 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E8AB9B340>}))
+08-27 21:13 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E884BB9A0>}))
+08-27 21:13 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-27 21:13 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x0000019EFDABCDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x0000019EFDABCD30>}
+08-27 21:13 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.dqn.dqn.DQN'>]
+08-27 21:13 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E83B04790>
+08-27 21:13 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-27 21:13 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-27 21:13 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-27 21:13 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.dqn.dqn.DQN'>
+08-27 21:13 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.dqn.policies.DQNPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E91C1E040>, 'verbose': True}
+08-27 21:13 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-27 21:13 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-27 21:13 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E91A09C70>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\DQN_discrete_singleaction', 'tb_log_name': 'DQN_discrete_singleaction'})
+08-27 21:13 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-28 13:21 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-28 13:21 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-28 13:21 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E97A55FD0>
+08-28 13:26 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-28 13:26 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_PPO_box]
+08-28 13:26 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-28 13:26 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E99147C10>}))
+08-28 13:26 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E96E6E5B0>}))
+08-28 13:26 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-28 13:26 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-28 13:26 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-28 13:26 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-28 13:26 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.box_gym_actspace.BoxGymnasiumActSpace'>  with arguments {'attr_to_keep': ['redispatch', 'curtail']}
+08-28 13:26 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)]
+08-28 13:26 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ppo.ppo.PPO'>]
+08-28 13:26 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E855734C0>
+08-28 13:26 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Box([  0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+  -1.4  -1.4 -10.4  -1.4  -2.8  -2.8  -4.3  -2.8  -8.5  -9.9], [ 1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.4  1.4
+ 10.4  1.4  2.8  2.8  4.3  2.8  8.5  9.9], (22,), float32)
+08-28 13:26 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-28 13:26 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-28 13:26 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ppo.ppo.PPO'>
+08-28 13:26 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E84B9E400>, 'verbose': True}
+08-28 13:26 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-28 13:26 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-28 13:26 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E8D96CDF0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\PPO_box', 'tb_log_name': 'PPO_box'})
+08-28 13:26 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-29 15:15 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-29 15:15 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-29 15:15 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E8C4A2C70>
+08-29 15:18 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-29 15:18 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_PPO_discrete]
+08-29 15:18 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-29 15:18 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019F02808B80>}))
+08-29 15:18 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019F02805610>}))
+08-29 15:18 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-29 15:18 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-29 15:18 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-29 15:18 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-29 15:18 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <class 'grid2op.gym_compat.discrete_gym_actspace.MultiDiscreteActSpaceGymnasium'>  with arguments {'attr_to_keep': {'redispatch', 'curtail'}}
+08-29 15:18 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(205)]
+08-29 15:18 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ppo.ppo.PPO'>]
+08-29 15:18 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019E87F06BE0>
+08-29 15:18 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(205)
+08-29 15:18 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-29 15:18 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-29 15:18 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ppo.ppo.PPO'>
+08-29 15:18 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E9C55AC70>, 'verbose': True}
+08-29 15:18 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-29 15:18 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-29 15:18 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019E8AF2DDC0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\PPO_discrete', 'tb_log_name': 'PPO_discrete'})
+08-29 15:18 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+08-30 04:22 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+08-30 04:22 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+08-30 04:22 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019E9BC28EB0>
+08-30 04:31 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+08-30 04:31 | INFO    | src.AutoGrid             | 191  | Executing experiment [experiment_PPO_singleaction]
+08-30 04:31 | DEBUG   | src.AutoGrid             | 147  | Creating backend [<class 'lightsim2grid.lightSimBackend.LightSimBackend'>]
+08-30 04:31 | DEBUG   | src.AutoGrid             | 160  | Creating a new environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_train', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.redispReward.RedispReward'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019F03560370>}))
+08-30 04:31 | DEBUG   | src.AutoGrid             | 175  | Creating a new evaluation environment using <function make at 0x0000019EF7084160>(([], {'dataset': 'l2rpn_icaps_2021_large_val', 'difficulty': 'competition', 'reward_class': <class 'grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore'>, 'backend': <lightsim2grid.lightSimBackend.LightSimBackend object at 0x0000019E98D8C0A0>}))
+08-30 04:31 | DEBUG   | src.makers.SB3           | 24   | Environment [<Environment_l2rpn_icaps_2021_large_train instance named l2rpn_icaps_2021_large_train>]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 40   | Gym Environment [<CustomGymEnv instance>]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 50   | Creating new gym observation space using <class 'grid2op.gym_compat.box_gym_obsspace.BoxGymnasiumObsSpace'> with arguments {'attr_to_keep': ['gen_p', 'gen_q', 'gen_v', 'gen_margin_up', 'gen_margin_down', 'load_p', 'load_q', 'load_v', 'p_or', 'q_or', 'v_or', 'a_or', 'p_ex', 'q_ex', 'v_ex', 'a_ex', 'rho', 'line_status', 'timestep_overflow', 'target_dispatch', 'actual_dispatch', 'curtailment', 'curtailment_limit', 'thermal_limit', 'theta_or', 'theta_ex', 'load_theta', 'gen_theta']}
+08-30 04:31 | DEBUG   | src.makers.SB3           | 57   | Gym observation_space [Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 67   | Creating new gym action space using <function create_discrete_action_space at 0x0000019EFDABCDC0>  with arguments {'save_path': './discrete_action_space', 'load_path': './discrete_action_space', '_action_filter': <function _filter_action at 0x0000019EFDABCD30>}
+08-30 04:31 | DEBUG   | experiments.sb3_grid_ace.final.base_IncreasingFlatReward | 113  | Loaded Action space size:201 from folder [./discrete_action_space]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 74   | Gym action_space [Discrete(201)]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 87   | Creating agent [<class 'stable_baselines3.ppo.ppo.PPO'>]
+08-30 04:31 | DEBUG   | src.makers.SB3           | 88   | env.action_space: <grid2op.Space.GridObjects.ActionSpace_l2rpn_icaps_2021_large_train object at 0x0000019F02C6BEE0>
+08-30 04:31 | DEBUG   | src.makers.SB3           | 89   | env_gym.action_space: Discrete(201)
+08-30 04:31 | DEBUG   | src.makers.SB3           | 90   | env_gym.observation_space: Box([0. 0. 0. ... 0. 0. 0.], [inf inf inf ... inf inf inf], (1194,), float32)
+08-30 04:31 | DEBUG   | src.makers.SB3           | 91   | gymenv: <CustomGymEnv instance>
+08-30 04:31 | DEBUG   | src.makers.SB3           | 92   | nn_type: <class 'stable_baselines3.ppo.ppo.PPO'>
+08-30 04:31 | DEBUG   | src.makers.SB3           | 93   | nn_kwargs: {'policy': <class 'stable_baselines3.common.policies.ActorCriticPolicy'>, 'tensorboard_log': './agents_RedispReward\\tensorboard_log', 'env': <experiments.sb3_grid_ace.final.base_IncreasingFlatReward.CustomGymEnv object at 0x0000019E98714190>, 'verbose': True}
+08-30 04:31 | DEBUG   | src.makers.SB3           | 94   | nn_path: None
+08-30 04:31 | INFO    | src.AutoGrid             | 199  | Training agent with [DEFAULT]
+08-30 04:31 | DEBUG   | src.trainner.trainer     | 27   | Training agent [<src.agents.Grid2OpSB3.SB3AgentGrid2Op object at 0x0000019F02CA29D0>] with trainner: DEFAULT({'total_timesteps': 10000000, 'reset_num_timesteps': False, 'add_training': False, 'save_path': './agents_RedispReward\\PPO_discrete_singleaction', 'tb_log_name': 'PPO_discrete_singleaction'})
+08-30 04:31 | DEBUG   | src.agents.Grid2OpSB3    | 234  | Training agent for 10000000 timesteps
+09-01 01:05 | INFO    | src.AutoGrid             | 205  | Evaluating agent with [GRID2OP_BASELINE]
+09-01 01:05 | DEBUG   | src.evaluators.evaluator | 31   | evaluation env: <Environment_l2rpn_icaps_2021_large_val instance named l2rpn_icaps_2021_large_val>
+09-01 01:05 | DEBUG   | src.evaluators.evaluator | 33   | evaluation reward: <grid2op.Reward.l2RPNSandBoxScore.L2RPNSandBoxScore object at 0x0000019F0A6C5B20>
+09-01 01:11 | DEBUG   | src.AutoGrid             | 210  | Execution finished, cleaning up resources.
+09-01 01:11 | INFO    | src.AutoGrid             | 220  | Finished execution.
