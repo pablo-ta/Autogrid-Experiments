@@ -16,7 +16,12 @@ Each experiment folder contains the following file structure:
     * file: the overal **performance.txt**
     * folders: specific performance on each evaluation scenario with the **Scenario\_<scenario name\>** folder name.
 
-# Understanding the numbers:
+
+ # Experiment results:
+
+This are the plots and table from each expriment **plots** folder.
+
+## Understanding the numbers:
 
 **Score**: The evaluation score is the output of L2RPNSandBoxScore class which computes "grid operation cost": the sum of costs due to: loss, redispatch, storage and curtailment, each computed separately and then added together. Lower score mean lower operation cost which is better. 
 
@@ -24,10 +29,6 @@ Each experiment folder contains the following file structure:
 	
 **Score\/Timesteps**:Obtained those two metrics we will compute the score over the timestep, reflecting the operation cost per 5 minutes of operation, so we can see if the agents that manage to stay "alive" longer incur in bigger operational costs.
 
-
- # Experiment results:
-
-This are the plots and table from each expriment **plots** folder.
 
  ## PPO extended experiment
  
